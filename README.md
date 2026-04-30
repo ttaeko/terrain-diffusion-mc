@@ -1,3 +1,8 @@
+This fork is modified specifically for the Taeko & Co server. The main targets are:
+- (⏳) Approximately 2:1 scale. 1:1 would have been nice, but is borderline impossible/unplayable with current MC chunk (height) limitations.
+- (⏳) Model trained specifically on alpine terrain.
+- (⏳) Lakes instead of oceans.
+
 # Terrain Diffusion Fabric Mod
 
 This is a Minecraft Fabric mod integrating [Terrain Diffusion](https://github.com/xandergos/terrain-diffusion).
