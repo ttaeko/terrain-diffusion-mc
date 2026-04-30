@@ -23,8 +23,8 @@ public final class WorldScaleSettingsScreen extends Screen {
     private static final int BUTTON_HEIGHT = 20;
 
     private static final Text LABEL_TEXT = Text.literal("World Scale");
-    private static final Text DESCRIPTION_TEXT = Text.literal("Enter an integer value (1-6)");
-    private static final Text ERROR_TEXT = Text.literal("Scale must be an integer between 1 and 6")
+    private static final Text DESCRIPTION_TEXT = Text.literal("Enter an integer value (1-12)");
+    private static final Text ERROR_TEXT = Text.literal("Scale must be an integer between 1 and 12")
             .formatted(Formatting.RED);
 
     private final Screen parentScreen;

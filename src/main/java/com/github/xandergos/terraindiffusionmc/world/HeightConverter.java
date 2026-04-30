@@ -4,14 +4,14 @@ import com.github.xandergos.terraindiffusionmc.pipeline.WorldPipelineModelConfig
 
 public class HeightConverter {
     private static final int SEA_LEVEL = 63;
-    private static final short MAX_PIPELINE_METERS = 10_000;
+    private static final short MAX_PIPELINE_METERS = 4_800;
 
     private static float getResolutionForScale(int configuredScale) {
         return WorldPipelineModelConfig.nativeResolution() / WorldScaleManager.clampScale(configuredScale);
     }
 
     public static int convertToMinecraftHeight(short meters) {
-        return convertToMinecraftHeight(meters, WorldScaleManager.getCurrentScale());
+        return convertToMinecraftHeight(meters, (WorldScaleManager.getCurrentScale()/2)+1);
     }
 
     public static int convertToMinecraftHeight(short meters, int configuredScale) {

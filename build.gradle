@@ -15,7 +15,9 @@ def withSourcesJar = project.hasProperty('withSourcesJar') && project.property('
 if ([useCuda, useDml, useCpu].count { it } > 1) {
     throw new GradleException("Only one of -PuseCuda, -PuseDml, or -PuseCpu may be specified at a time.")
 }
-if (!useDml && !useCpu && !useCuda) useDml = true
+
+// macos :)
+if (!useDml && !useCpu && !useCuda) useCpu = true
 
 println "Build variant: ${useCuda ? 'CUDA' : useDml ? 'DirectML (Windows)' : 'CPU'}"
 def modelRepositorySlug = 'xandergos/terrain-diffusion-30m-onnx'
